@@ -1,0 +1,21 @@
+//CLASSPATH
+.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\htmlconverter.jar;%JAVA_HOME%\jre\lib;%JAVA_HOME%\jre\lib\rt.jar
+
+//JAVA_HOME
+C:\Program Files\Java\jdk-21\
+
+//JAVA_TOOL_OPTIONS
+-Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -Dconsole.encoding=UTF-8
+
+//PATH_TO_FX
+set PATH_TO_FX="path\to\javafx-sdk-21.0.4\lib"
+
+
+//COMPILANDO E EXECUTANDO
+javac --module-path %PATH_TO_FX% --add-modules javafx.controls HelloFX.java //compilando
+javac --module-path %PATH_TO_FX% --add-modules javafx.controls,javafx.fxml HelloFX.java //compilando com vários módulos
+java --module-path %PATH_TO_FX% --add-modules javafx.controls HelloFX //executando
+
+//launch.json configuração
+"vmArgs": "--module-path 'C:\\Program Files\\Java\\javafx-sdk-21.0.4\\lib' --add-modules javafx.controls",
+
